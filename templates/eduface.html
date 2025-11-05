@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+
+{% block title %}
+EduFace.io
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section">
+        <h1 class="project-title">EduFace.io</h1>
+        <div class="project-links">
+            <a href="https://omvarma.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading">Problem Statement</h2>
+        <p class="section-text">
+            Many institutions rely on traditional login systems that require manual credentials, leading to delays and
+            inefficiencies. EduFace.io solves this by using facial recognition to instantly identify users and route
+            them to their role-specific dashboards, ensuring a faster and more secure login experience.
+
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading">Screenshots</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace7.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/EduFace/EduFace8.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading">Detailed Description</h2>
+        <p class="section-text">
+            EduFace.io is a full-stack web application that uses deep learning-based facial recognition to streamline
+            user login for educational institutions. It detects a person via webcam, recognizes their identity using a
+            trained Convolutional Neural Network (CNN) model, and automatically redirects them to a role-specific
+            homepage based on whether they are a student, teacher, or principal.
+        </p>
+        <p class="section-text">
+            This project demonstrates the seamless integration of AI/ML with web development, offering a secure, fast,
+            and modern alternative to traditional username-password login systems.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading">📌 Development Steps</h2>
+        <div class="section-text">
+            <div class="step-block">
+                <h3>🔹 ML Phase (Face Recognition)</h3>
+                <ul>
+                    <li>Collect face images for each user (Student, Teacher, Principal)</li>
+                    <li>Preprocess - Face detection (OpenCV), resize, grayscale</li>
+                    <li>Train CNN model to classify faces</li>
+                    <li>Evaluate model & save → model.save()</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Backend (Flask)</h3>
+                <ul>
+                    <li>Set up Flask app → app.py & route handling</li>
+                    <li>Load CNN model & write prediction logic</li>
+                    <li>Handle webcam input from frontend (POST)</li>
+                    <li>Redirect user to role-based homepage</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Build UI - Webcam access & capture button</li>
+                    <li>Send image to backend using JS fetch()</li>
+                    <li>Clean design using custom CSS + minimal animation</li>
+                    <li>Display result or unknown user message</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Routing System</h3>
+                <ul>
+                    <li>Student → /student_home</li>
+                    <li>Teacher → /teacher_home</li>
+                    <li>Principal → /principal_home</li>
+                    <li>Unknown → Error or Access Denied page</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Prepare requirements.txt & static structure</li>
+                    <li>Deploy on PythonAnywhere</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>README + Model Info + Screenshots</li>
+                    <li>Project Card for Portfolio</li>
+                    <li>Optional Video Demo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">DL</span>
+            <span class="tech-tag">CNN</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading">Main Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <h3 class="feature-title">Face Recognition Login</h3>
+                <p class="feature-text">Log in securely using facial recognition powered by a deep learning CNN model.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Instant Role Routing</h3>
+                <p class="feature-text">Automatically redirect users (student, teacher, principal) to their specific
+                    dashboards.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎥</span>
+                <h3 class="feature-title">Webcam Integration</h3>
+                <p class="feature-text">Capture real-time images directly from the browser for quick and seamless
+                    identity checks.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading">Reflections & Improvements</h2>
+        <p class="section-text">
+            Building EduFace.io was an insightful journey that combined machine learning with full-stack development.
+            The face recognition model required careful preprocessing and training to handle varied lighting and angles.
+            A major learning was the importance of consistent image data and testing in real-world conditions. Future
+            improvements could include expanding role support, enabling real-time attendance tracking, improving
+            accuracy with larger datasets, and adding a fallback login for unrecognized users.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
+                    Collaborate</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+
+{% block title %}
+PennyWise.io
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section">
+        <h1 class="project-title">PennyWise.io</h1>
+        <div class="project-links">
+            <a href="https://omvarma4.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading">Problem Statement</h2>
+        <p class="section-text">
+            Many individuals struggle to keep track of their daily spending, often leading to overspending and poor
+            financial awareness. Traditional methods like spreadsheets are manual and time-consuming. PennyWise.io
+            solves this by providing a simple, digital way to log and categorize expenses, giving users instant insights
+            into their financial habits.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading">Screenshots</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise7.JPG') }}" alt="Screenshot 7"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise8.JPG') }}" alt="Screenshot 8"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise9.JPG') }}" alt="Screenshot 9"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise10.JPG') }}" alt="Screenshot 10"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise11.JPG') }}" alt="Screenshot 11"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise12.JPG') }}" alt="Screenshot 12"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise13.JPG') }}" alt="Screenshot 13"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading">Detailed Description</h2>
+        <p class="section-text">
+            PennyWise.io is a personal finance web application built to help users track their income and expenses in a
+            clean, intuitive interface. Designed as a full-stack web app using Flask, HTML, CSS, and JavaScript, it
+            enables users to add, view, and delete transactions in real-time. Each transaction is categorized (Food,
+            Transport, Bills, etc.) and dynamically reflected in a balance summary.
+        </p>
+        <p class="section-text">
+            The goal is to encourage financial discipline by offering users a visual breakdown of their spending
+            behavior. The project combines a responsive front end with a Python-based backend, and can be deployed
+            online for personal use.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading">📌 Development Steps</h2>
+        <div class="section-text">
+
+            <div class="step-block">
+                <h3>🔹 Backend (Flask)</h3>
+                <ul>
+                    <li>Set up Flask app structure - app.py, routes, templates</li>
+                    <li>POST/GET handling for add & delete operations</li>
+                    <li>Store transaction and all related data in SQL DB</li>
+                    <li>Calculate total balance, income, and expenses dynamically</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Form to input amount, category, and type (income/expense)</li>
+                    <li>Render transactions with delete button in styled list</li>
+                    <li>Update balance in real-time using JavaScript DOM</li>
+                    <li>Use Flex/Grid for layout and Bootstrap-like styling</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Extra Logic</h3>
+                <ul>
+                    <li>Color-coded values (green for income, red for expense)</li>
+                    <li>Dropdown category menu with default options</li>
+                    <li>Basic confirmation before deleting a transaction</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Prepare requirements.txt and structure folders</li>
+                    <li>Deploy on PythonAnywhere with static & template support</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>README with features, screenshots, and tech stack</li>
+                    <li>Portfolio display section</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">JS</span>
+            <span class="tech-tag">MySQL</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading">Main Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <span class="feature-icon">💰</span>
+                <h3 class="feature-title">Transaction Tracking</h3>
+                <p class="feature-text">Easily log income and expenses with category selection and instant updates.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3 class="feature-title">Live Financial Summary</h3>
+                <p class="feature-text">View total balance, income, and spending breakdown in real-time.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧾</span>
+                <h3 class="feature-title">Expense List & Deletion</h3>
+                <p class="feature-text">Each transaction is listed with a delete option for easy updates.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading">Reflections & Improvements</h2>
+        <p class="section-text">
+            Creating PennyWise.io was a valuable exercise in full-stack web development and UI design. It helped
+            reinforce concepts like data handling with Flask, form validation, and real-time DOM updates with
+            JavaScript. A key takeaway was ensuring seamless user experience through intuitive design and clear
+            financial visuals. Future enhancements could include secure user accounts, mobile responsiveness, and visual
+            analytics using libraries like Chart.js.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
+                    Collaborate</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

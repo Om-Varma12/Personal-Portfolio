@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block content %}
+
+<section class="filter-tabs">
+    <div class="container">
+        <div class="tabs-container">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="Python">Python</button>
+            <button class="tab-btn" data-filter="Flask">Flask</button>
+            <button class="tab-btn" data-filter="ML">ML</button>
+            <button class="tab-btn" data-filter="DL">DL</button>
+            <button class="tab-btn" data-filter="CNN">CNN</button>
+            <button class="tab-btn" data-filter="MySQL">MySQL</button>
+            <button class="tab-btn" data-filter="NLP">NLP</button>
+            <button class="tab-btn" data-filter="LLM">LLM</button>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="projects-container">
+        <div class="project-card animate-from-left" data-tags="Flask,Python,ML">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe.JPG') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>GradSafe.io</h3>
+            <p>A smart web app that analyzes student performance to predict GPA and detention risk in real time.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">ML</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">Numpy</span>
+            </div>
+            <div class="project-links">
+                <a href="/gradsafe" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/GradSafe.git" class="link-btn">GitHub</a>
+                <a href="https://omvarma.pythonanywhere.com/" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Flask,Python,DL">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/EduFace/EduFace.JPG') }}" alt="Project 2 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>EduFace.io</h3>
+            <p>A smart attendance system that identifies students using facial recognition and directs them accordingly.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">DL</span>
+                <span class="tech-badge">CNN</span>
+            </div>
+            <div class="project-links">
+                <a href="/eduface" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/EduFace.git" class="link-btn">GitHub</a>
+                <a href="#" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-left" data-tags="Flask,Python,MySQL">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/PennyWise/PennyWise.JPG') }}" alt="Project 3 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>PennyWise.io</h3>
+            <p>Track, visualize, and manage your expenses with smart reports and spending alerts.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+                <a href="/pennywise" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/PennyWise.git" class="link-btn">GitHub</a>
+                <a href="https://omvarma4.pythonanywhere.com/" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Flask,Python,NLP">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Quirky/Quirky.JPG') }}" alt="Project 3 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Quirky</h3>
+            <p>Quirky — your witty companion with answers and attitude!</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">ML</span>
+            </div>
+            <div class="project-links">
+                <a href="/quirky" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/Quiry.git" class="link-btn">GitHub</a>
+                <a href="https://omvarma4.pythonanywhere.com/" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-left" data-tags="Flask,Python,NLP, LLM">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/OmNion/OmNion.JPG') }}" alt="Project 3 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>OmNion</h3>
+            <p>OmNion — My personal AI, ready to answer your every question with insight and style!</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">LLM</span>
+            </div>
+            <div class="project-links">
+                <a href="/omnion" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/OmNion.git" class="link-btn">GitHub</a>
+                <a href="https://omvarma4.pythonanywhere.com/" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Flask,Python,NLP,LLM">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify.JPG') }}" alt="Project 3 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Chaplify</h3>
+            <p>Chaplify — Instantly chat with your documents using AI.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">NLP</span>
+                <span class="tech-badge">LLM</span>
+            </div>
+            <div class="project-links">
+                <a href="/chaplify" class="link-btn">View</a>
+                <a href="https://github.com/Om-Varma12/Chaplify.git" class="link-btn">GitHub</a>
+                <a href="https://omvarma5.pythonanywhere.com/" class="link-btn">Live Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

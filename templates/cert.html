@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Certifications
+{% endblock %}
+
+{% block content %}
+
+<section class="filter-tabs">
+    <div class="container">
+        <div class="tabs-container">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="Kodacy">Kodacy</button>
+            <button class="tab-btn" data-filter="HackerRank">HackerRank</button>
+            <button class="tab-btn" data-filter="Be10x">Be10x</button>
+            <button class="tab-btn" data-filter="Udemy">Udemy</button>
+            <button class="tab-btn" data-filter="GeeksForGeeks">GeeksForGeeks</button>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="projects-container">
+        <div class="project-card animate-from-left" data-tags="Kodacy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/AI.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Intro to Artificial Intelligence</h3>
+            <p>A foundational certificate in Artificial Intelligence covering key concepts in machine learning, neural
+                networks, and intelligent systems.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Kodacy</span>
+            </div>
+            <div class="project-links">
+                <a href="" class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/AI.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Kodacy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/AIML.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Artificial Intelligence and Machine Learning</h3>
+            <p>A practical certification blending AI and Machine Learning to build real-world predictive and
+                decision-making models.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Kodacy</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/AIML.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-left" data-tags="Kodacy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/Gen AI.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Generative AI</h3>
+            <p>An advanced course exploring the creation of text, images, and code using cutting-edge generative AI
+                models.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Kodacy</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/Gen AI.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Kodacy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/Prompt Engg.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Prompt Engineering</h3>
+            <p>A hands-on guide to crafting effective prompts for large language models to drive accurate and creative
+                AI responses.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Kodacy</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/Prompt Engg.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-left" data-tags="Kodacy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/Python.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Python</h3>
+            <p>A complete certification in Python programming, from basic syntax to advanced scripting.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Kodacy</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/Python.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-right" data-tags="Be10x">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/AI and ChatGPT.JPG') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>AI and ChatGPT</h3>
+            <p>An interactive workshop that introduces AI fundamentals and unlocks the power of ChatGPT and other AI
+                tools for real-world tasks and automation.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Be10x</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/AI and ChatGPT.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+        <div class="project-card animate-from-left" data-tags="Udemy">
+            <div class="project-thumbnail">
+                <img src="{{ url_for('static', filename='assets/Certs/DS.jpg') }}" alt="Project 1 Thumbnail"
+                    class="thumbnail-img">
+            </div>
+            <h3>Data Science Mastery</h3>
+            <p>A beginner-friendly Udemy course that introduces core data science concepts—including analytics,
+                machine learning, and real-world workflows—without requiring any coding experience.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Udemy</span>
+            </div>
+            <div class="project-links">
+                <a href=" " class="link-btn view-btn"
+                    data-img-src="{{ url_for('static', filename='assets/Certs/DS.jpg') }}">View</a>
+                <a href=" " class="link-btn">Download</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.tab-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        // Check if we're on the certifications page
+        const isCertPage = window.location.pathname.includes('cert') ||
+            document.title.includes('Certification') ||
+            document.querySelector('.cert-provider');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.getAttribute('data-filter');
+
+                if (isCertPage) {
+                    // Single-select behavior for certifications page
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Get the active filter
+                    const activeFilter = filter;
+
+                    // Show projects that match the filter
+                    if (activeFilter === 'all') {
+                        projectCards.forEach(card => {
+                            card.style.display = 'block';
+                            card.classList.add('fade-in');
+                        });
+                    } else {
+                        projectCards.forEach(card => {
+                            const tags = card.getAttribute('data-tags').split(',');
+                            if (tags.includes(activeFilter)) {
+                                card.style.display = 'block';
+                                card.classList.add('fade-in');
+                            } else {
+                                card.style.display = 'none';
+                                card.classList.remove('fade-in');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        // Fullscreen functionality - updated to work with View buttons
+        const viewButtons = document.querySelectorAll('.view-btn');
+
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.className = 'fullscreen-image';
+        fullscreenContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: pointer;
+    `;
+
+        const fullscreenImg = document.createElement('img');
+        fullscreenImg.style.cssText = `
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 8px;
+    `;
+        fullscreenContainer.appendChild(fullscreenImg);
+        document.body.appendChild(fullscreenContainer);
+
+        // Add click handlers to View buttons
+        viewButtons.forEach(viewBtn => {
+            viewBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                const imgSrc = viewBtn.getAttribute('data-img-src');
+                if (imgSrc) {
+                    fullscreenImg.src = imgSrc;
+                    fullscreenContainer.style.display = 'flex';
+                }
+            });
+        });
+
+        // Remove hover effects from thumbnails since they're no longer clickable for fullscreen
+        const thumbnails = document.querySelectorAll('.thumbnail-img');
+        thumbnails.forEach(thumbnail => {
+            // Remove cursor pointer style since thumbnails are no longer clickable for fullscreen
+            thumbnail.style.cursor = 'default';
+        });
+
+        // Close fullscreen on click
+        fullscreenContainer.addEventListener('click', () => {
+            fullscreenContainer.style.display = 'none';
+        });
+
+        // Optional: Add ESC key to close fullscreen
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && fullscreenContainer.style.display === 'flex') {
+                fullscreenContainer.style.display = 'none';
+            }
+        });
+
+        // Add this code inside your existing DOMContentLoaded event listener
+
+        // Download functionality for certificates
+        const downloadButtons = document.querySelectorAll('.project-links a:not(.view-btn)'); // Selects Download buttons
+
+        downloadButtons.forEach(downloadBtn => {
+            downloadBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+
+                // Get the corresponding image source from the same card
+                const projectCard = downloadBtn.closest('.project-card');
+                const thumbnailImg = projectCard.querySelector('.thumbnail-img');
+                const certTitle = projectCard.querySelector('h3').textContent.trim();
+
+                if (thumbnailImg && thumbnailImg.src) {
+                    // Create a temporary anchor element for download
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = thumbnailImg.src;
+                    downloadLink.download = `${certTitle.replace(/[^a-zA-Z0-9]/g, '_')}_Certificate.jpg`; // Clean filename
+
+                    // Trigger download
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Quirky
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section">
+        <h1 class="project-title">Quirky</h1>
+        <div class="project-links">
+            <a href="https://omvarma4.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading">Problem Statement</h2>
+        <p class="section-text">
+            No big mission. No corporate problem to solve. Just me, experimenting, learning, and building a chatbot —
+            because… why not? I wanted to explore how a simple JSON-based intent system, a Flask backend, and a bit of
+            frontend magic could come together. This project isn't about reinventing the wheel — it's about getting my
+            hands dirty, understanding how things work, and enjoying the process of bringing an idea to life.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading">Screenshots</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Quirky/Quirky7.JPG') }}" alt="Screenshot 7"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading">Detailed Description</h2>
+        <p class="section-text">
+            Quirky is a simple, intent-based chatbot built using Flask, HTML, CSS, and JavaScript. It uses a custom JSON
+            file to classify user messages into predefined tags like greetings, info, or fallback, and responds with
+            dynamic, conversational replies.
+        </p>
+        <p class="section-text">
+            Designed as a learning project, Quirky focuses on understanding backend logic, data flow, and real-time
+            interaction without relying on heavy NLP models. It offers a smooth, interactive chat interface and serves
+            as a foundation for future AI integrations.
+        </p>
+
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading">📌 Development Steps</h2>
+        <div class="section-text">
+
+            <div class="step-block">
+                <h3>🔹 Backend (Flask)</h3>
+                <ul>
+                    <li>Set up basic Flask app with routes and JSON handling</li>
+                    <li>Create POST route to receive user messages</li>
+                    <li>Process messages and match patterns using custom JSON intent system</li>
+                    <li>Return appropriate response as JSON to frontend</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Build chat UI with input box, send button, and chat display area</li>
+                    <li>Use JavaScript to capture and send user input to backend</li>
+                    <li>Render bot responses dynamically in the chat container</li>
+                    <li>Style the interface with Flex/Grid and responsive design</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Intent System</h3>
+                <ul>
+                    <li>Design intents.json with tags, patterns, and responses</li>
+                    <li>Implement basic keyword matching logic for tag detection</li>
+                    <li>Handle unknown inputs using fallback response</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Prepare requirements.txt and clean folder structure</li>
+                    <li>Deploy on PythonAnywhere with working static + templates</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>Write README with description, features, and usage guide</li>
+                    <li>Add screenshots or demo GIF for better showcase</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLP</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading">Main Features</h2>
+        <div class="features-container">
+
+            <div class="feature-card">
+                <span class="feature-icon">💬</span>
+                <h3 class="feature-title">Real-Time Chat</h3>
+                <p class="feature-text">Send and receive messages instantly with smooth frontend-backend interaction.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <h3 class="feature-title">Intent-Based Responses</h3>
+                <p class="feature-text">User inputs are matched against custom-defined intents and responded to
+                    accordingly.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🧾</span>
+                <h3 class="feature-title">Fallback Handling</h3>
+                <p class="feature-text">Unknown inputs are gracefully handled with a quirky fallback message.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">⚙️</span>
+                <h3 class="feature-title">Easily Extendable</h3>
+                <p class="feature-text">Modify or add new intents and patterns directly via the editable JSON structure.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading">Reflections & Improvements</h2>
+        <p class="section-text">
+            Building Quirky was a great hands-on experience in combining backend logic with dynamic frontend
+            interaction. It strengthened my understanding of Flask routing, JSON-based intent handling, and real-time
+            communication between client and server using JavaScript. The project also gave me a chance to design a
+            playful user experience through a clean, responsive chat interface. I plan to integrate this chatbot into
+            each of my web projects to offer interactive support, fun engagement, or instant user guidance.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
+                    Collaborate</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

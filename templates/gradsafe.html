@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+
+{% block title %}
+GradSafe.io
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section">
+        <h1 class="project-title">GradSafe.io</h1>
+        <div class="project-links">
+            <a href="https://omvarma.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading">Problem Statement</h2>
+        <p class="section-text">
+            Many educational institutions struggle to identify at-risk students early enough to provide timely
+            interventions. Existing systems often rely on manual analysis of student performance, which is
+            time-consuming and prone to errors. GradSafe.io addresses this by providing real-time analysis of student
+            performance to predict GPA and detention risks, enabling proactive support for students.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading">Screenshots</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/GradSafe/GradSafe7.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading">Detailed Description</h2>
+        <p class="section-text">
+            GradSafe is a data-driven student performance monitoring and dropout risk prediction platform. It uses
+            machine learning models to forecast student's final grades and assess the probability of dropout based on
+            various academic, behavioral, and socio-economic factors. Designed as a web-based Single Page Application
+            (SPA), GradSafe allows schools and educators to proactively identify at-risk students and take preventive
+            action.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading">📌 Development Steps</h2>
+        <div class="section-text">
+            <div class="step-block">
+                <h3>🔹 ML Phase</h3>
+                <ul>
+                    <li>Dataset Ready - Load & explore student dataset</li>
+                    <li>Preprocess - Encode, scale, split</li>
+                    <li>Train Models</li>
+                    <li>Linear Regression → Final grade</li>
+                    <li>Logistic Regression → Dropout risk</li>
+                    <li>Evaluate & Save → joblib.dump()</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Backend (Flask)</h3>
+                <ul>
+                    <li>Flask Setup → app.py, routes</li>
+                    <li>Load models & write predict functions</li>
+                    <li>Create form routes (POST)</li>
+                    <li>Return prediction to HTML</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Build Form UI - Input student data</li>
+                    <li>Style with Bootstrap & A.I.</li>
+                    <li>Show results - Prediction & status</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Requirements + Procfile</li>
+                    <li>Deploy on PythonAnywhere</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>README + Screenshots</li>
+                    <li>Portfolio Card or Slide</li>
+                    <li>Optional Demo Video</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading">Main Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3 class="feature-title">Real-Time Analytics</h3>
+                <p class="feature-text">Instantly analyze student performance metrics to identify trends and risks.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔔</span>
+                <h3 class="feature-title">Predictive Alerts</h3>
+                <p class="feature-text">Receive automated alerts for students at risk of academic failure or detention.
+                </p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📈</span>
+                <h3 class="feature-title">Interactive Dashboard</h3>
+                <p class="feature-text">Visualize student data through customizable charts and graphs.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading">Reflections & Improvements</h2>
+        <p class="section-text">
+            Developing GradSafe.io was a challenging yet rewarding experience. The integration of machine learning
+            models required careful tuning to ensure accuracy and reliability. One key lesson was the importance of data
+            quality—ensuring clean and consistent data significantly improved model performance. Moving forward,
+            potential improvements include adding support for real-time data streaming, enhancing the UI for mobile
+            devices, and incorporating natural language processing to analyze teacher feedback.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's Collaborate</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

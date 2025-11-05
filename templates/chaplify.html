@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Chaplify
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section animate-on-scroll">
+        <h1 class="project-title">Chaplify</h1>
+        <div class="project-links">
+            <a href="https://omvarma5.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading animate-on-scroll">Problem Statement</h2>
+        <p class="section-text animate-on-scroll">
+            Students often go through long PDFs — textbooks, notes, or assignments — just to find answers to a few
+            specific questions.
+            This can be time-consuming and frustrating, especially during exam time or while revising. There is a need
+            for a smart,
+            easy-to-use tool that helps students quickly get answers from their own study material without reading
+            everything.
+        </p>
+
+
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading animate-on-scroll">Screenshots</h2>
+        <div class="carousel-container animate-on-scroll">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify7.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify8.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify9.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/Chaplify/Chaplify10.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading animate-on-scroll">Detailed Description</h2>
+        <p class="section-text animate-on-scroll">
+            Chaplify is a smart PDF-based chatbot assistant designed to help students get instant answers from their own
+            study material.
+            Instead of scrolling through long textbooks or notes, students can simply upload a PDF and ask questions —
+            Chaplify reads
+            the document and responds using natural language.
+        </p>
+        <p class="section-text animate-on-scroll">
+            Powered by Together.ai's large language models and built with Flask, Chaplify combines LLM intelligence with
+            a clean
+            frontend interface. It uses PDF parsing, intelligent chunking, vector embeddings, and semantic search to
+            find the
+            most relevant context before generating an accurate and helpful response.
+        </p>
+        <p class="section-text animate-on-scroll">
+            Chaplify makes self-study faster and smarter by turning any document into an interactive knowledge
+            assistant.
+            Whether it's for revision, assignments, or quick concept clarifications — Chaplify is there to help.
+        </p>
+
+
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading animate-on-scroll">📌 Development Steps</h2>
+        <div class="section-text">
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 PDF Processing</h3>
+                <ul>
+                    <li>Allow user to upload a PDF through the frontend interface</li>
+                    <li>Read and extract text from the PDF page by page</li>
+                    <li>Combine page-wise content and prepare a clean context structure</li>
+                    <li>Send the entire document text to the LLM as initial system context</li>
+                </ul>
+            </div>
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 Backend (Flask + Together.ai)</h3>
+                <ul>
+                    <li>Set up Flask backend with API routes for file upload and chat</li>
+                    <li>Integrate Together.ai's LLM API for handling natural questions</li>
+                    <li>Feed full PDF content to the model before user questions begin</li>
+                    <li>Send user questions as prompts with context and return responses as JSON</li>
+                </ul>
+            </div>
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Design UI to upload PDF, show chat box, and display messages</li>
+                    <li>Use JavaScript to handle PDF uploads and chat requests via fetch</li>
+                    <li>Dynamically show both student questions and LLM-generated answers</li>
+                    <li>Apply responsive layout and user-friendly animations</li>
+                </ul>
+            </div>
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 LLM Integration</h3>
+                <ul>
+                    <li>Securely configure Together.ai API with environment variables</li>
+                    <li>Use system prompts to inject full PDF content before Q&A begins</li>
+                    <li>Structure user messages as chat format inputs to LLM</li>
+                    <li>Handle slow responses, API limits, and fallback gracefully</li>
+                </ul>
+            </div>
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Clean code, organize routes, and list dependencies in requirements.txt</li>
+                    <li>Deploy app to PythonAnywhere or an alternative like Render or VPS</li>
+                </ul>
+            </div>
+
+            <div class="step-block animate-on-scroll">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>Write a clean README with usage steps, API flow, and project goals</li>
+                    <li>Add demo GIFs or screenshots showing a sample PDF Q&A session</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading animate-on-scroll">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag animate-on-scroll">Flask</span>
+            <span class="tech-tag animate-on-scroll">Python</span>
+            <span class="tech-tag animate-on-scroll">NLP</span>
+            <span class="tech-tag animate-on-scroll">LLM</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading animate-on-scroll">Main Features</h2>
+        <div class="features-container">
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">📄</span>
+                <h3 class="feature-title">Ask from Your PDF</h3>
+                <p class="feature-text">Upload any study material, and instantly start asking questions directly based
+                    on its content.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">🤖</span>
+                <h3 class="feature-title">LLM-Powered Intelligence</h3>
+                <p class="feature-text">Together.ai's large language models generate smart, natural answers using full
+                    PDF context.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Real-Time Chat</h3>
+                <p class="feature-text">Smooth and responsive chat interface built with Flask and JavaScript for instant
+                    interaction.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">🧠</span>
+                <h3 class="feature-title">Contextual Memory</h3>
+                <p class="feature-text">Understands your PDF holistically by feeding its content to the model as system
+                    context.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">📚</span>
+                <h3 class="feature-title">Student-Friendly</h3>
+                <p class="feature-text">Designed with students in mind — perfect for quick revisions, clearing doubts,
+                    and learning smarter.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <span class="feature-icon">🔧</span>
+                <h3 class="feature-title">Modular & Scalable</h3>
+                <p class="feature-text">Built to expand — upgrade models, add document history, or support more file
+                    types easily.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading animate-on-scroll">Reflections & Improvements</h2>
+        <p class="section-text animate-on-scroll">
+            Building Chaplify was my first deep dive into combining document processing with real-time, LLM-powered
+            conversations.
+            I learned how to extract and structure data from PDFs, manage large context windows, and feed relevant
+            information to the model in a meaningful way.
+            Working with Together.ai's API helped me understand prompt design, latency handling, and error fallback
+            techniques.
+            This project also strengthened my backend skills with Flask and improved how I build clean, functional
+            frontends using fetch and JavaScript.
+            Going forward, I'd like to enhance Chaplify with PDF summarization, multi-file support, and user session
+            memory for even smoother conversations.
+        </p>
+    </section>
+
+
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading animate-on-scroll">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card animate-on-scroll">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
+                    Collaborate</a>
+            </div>
+            <div class="cta-card animate-on-scroll">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card animate-on-scroll">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

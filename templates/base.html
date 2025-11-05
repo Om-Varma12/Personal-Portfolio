@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <div class="logo-content">
+                        <span class="logo-text">&lt;/Om&gt;</span>
+                        <span class="logo-slogan">Build. Solve. Repeat.</span>
+                    </div>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="/" class="nav-link active">Home</a></li>
+                        <li><a href="/about" class="nav-link">About</a></li>
+                        <li><a href="/projects" class="nav-link">Projects</a></li>
+                        <li><a href="/cert" class="nav-link">Certs</a></li>
+                        <li><a href="/experience" class="nav-link">Experience</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
+                        <li><a href="/resume" class="nav-link">Resume</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">☀️</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <button id="scrollToTop" class="scroll-to-top" onclick="window.scrollTo(0, 0)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <button id="robotButton" class="robot-button">
+        🤖
+        <span class="robot-message">Hey!! Need any help??</span>
+    </button>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/home" class="logo">
+                        <span class="logo-text" style="font-size: 1.2rem;">&lt;/Om&gt;</span>
+                    </a>
+                    <p>Email: support@om.io<br>Phone: +91 98765-43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 &lt;/Om&gt;. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

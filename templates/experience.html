@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Experience
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .stat-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 16px var(--shadow-color);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--card-border);
+    }
+</style>
+<section id="reports" class="section">
+    <div class="dashboard-stats">
+        <div class="stat-card">
+            <div class="stat-content">
+                <p style="font-size: 1.3rem; font-weight: 500;">🛠️ Oops! This part of the site is still cooking. Come
+                    back soon to see what's brewing!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+FLASK PORTFOLIO PROJECT STRUCTURE
+=================================
+
+my-portfolio/
+├── app.py                    # Main Flask application
+├── requirements.txt          # Project dependencies
+├── README.md                # Project documentation
+├── .gitignore               # Git ignore file
+├── .env                     # Environment variables
+├── 
+├── templates/               # HTML templates
+│   ├── base.html           # Base template with common elements
+│   ├── index.html          # Home/landing page
+│   ├── about.html          # About page
+│   ├── projects.html       # Projects showcase
+│   ├── certifications.html # Certificates display
+│   ├── experience.html     # Work experience
+│   └── contact.html        # Contact form
+├──
+├── static/                 # Static assets
+│   ├── css/               # Stylesheets
+│   │   ├── style.css      # Main styles
+│   │   ├── responsive.css # Mobile responsiveness
+│   │   └── animations.css # Interactive animations
+│   ├── js/                # JavaScript files
+│   │   ├── main.js        # Core functionality
+│   │   ├── animations.js  # Interactive features
+│   │   └── form-handler.js # Contact form handling
+│   ├── images/            # Image assets
+│   │   ├── profile/       # Profile photos
+│   │   ├── projects/      # Project screenshots
+│   │   ├── certificates/  # Certificate images
+│   │   └── icons/         # UI icons
+│   └── assets/            # Other assets
+│       ├── resume.pdf     # Downloadable resume
+│       ├── favicon.ico    # Website icon
+│       └── logo.png       # Personal/brand logo
+└──
+└── data/                   # Data files (optional)
+    ├── projects.json       # Project information
+    ├── certifications.json # Certificate data
+    └── experience.json     # Work experience data

@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+
+{% block title %}
+OmNion
+{% endblock %}
+
+{% block content %}
+
+<div class="project-container">
+    <!-- Project Title Section -->
+    <section class="project-title-section">
+        <h1 class="project-title">OmNion</h1>
+        <div class="project-links">
+            <a href="https://omvarma4.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" class="project-link-btn">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+        <h2 class="section-heading">Problem Statement</h2>
+        <p class="section-text">
+            No big mission. No corporate problem to solve. Just me, experimenting, learning, and building a chatbot —
+            because… why not? I wanted to explore how a simple JSON-based intent system, a Flask backend, and a bit of
+            frontend magic could come together. This project isn't about reinventing the wheel — it's about getting my
+            hands dirty, understanding how things work, and enjoying the process of bringing an idea to life.
+        </p>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Screenshots Carousel Section -->
+    <section class="screenshots-section">
+        <h2 class="section-heading">Screenshots</h2>
+        <div class="carousel-container">
+            <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion.JPG') }}" alt="Screenshot 1"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion2.JPG') }}" alt="Screenshot 2"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion3.JPG') }}" alt="Screenshot 3"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion4.JPG') }}" alt="Screenshot 4"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion5.JPG') }}" alt="Screenshot 5"
+                        class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion6.JPG') }}" alt="Screenshot 6"
+                        class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-next" aria-label="Next Slide">&gt;</button>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Detailed Description Section -->
+    <section class="description-section">
+        <h2 class="section-heading">Detailed Description</h2>
+        <p class="section-text">
+            OmNion is a smart, LLM-powered personal chatbot assistant designed to answer user queries about me and
+            my projects.
+            Built using Flask, Together.ai APIs, HTML, CSS, and JavaScript, it blends a clean frontend with a powerful
+            backend for natural, conversational interactions.
+        </p>
+        <p class="section-text">
+            It leverages large language models to understand open-ended questions, provide detailed responses, and
+            simulate a human-like assistant with memory and context capabilities.
+            Whether you're curious about my work, tech stack, or latest innovations — OmNion has the answers.
+        </p>
+        <p class="section-text">
+            OmNion is an evolved extension of Quirky — the original intent-based chatbot built by me — but now
+            supercharged with Together.ai's LLMs, enabling more intelligent and flexible conversations beyond predefined
+            tags.
+        </p>
+
+    </section>
+
+    <div class="custom-line"></div>
+
+    <section class="steps-section">
+        <h2 class="section-heading">📌 Development Steps</h2>
+        <div class="section-text">
+
+            <div class="step-block">
+                <h3>🔹 Backend (Flask + Together.ai)</h3>
+                <ul>
+                    <li>Set up Flask backend with API routes to handle chat requests</li>
+                    <li>Integrate Together.ai’s LLM API for natural language understanding</li>
+                    <li>Send user messages to Together’s endpoint and fetch intelligent responses</li>
+                    <li>Return the LLM's response to the frontend in JSON format</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <ul>
+                    <li>Design chat interface with input box, send button, and message display</li>
+                    <li>Use JavaScript to send user queries to the Flask backend via fetch</li>
+                    <li>Dynamically render user and bot messages in the chat UI</li>
+                    <li>Implement responsive layout with smooth UX styling</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 LLM Integration</h3>
+                <ul>
+                    <li>Configure Together.ai API with secure environment variables</li>
+                    <li>Format user input as messages compatible with LLM chat format</li>
+                    <li>Handle errors, timeouts, and fallback gracefully</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Deploy</h3>
+                <ul>
+                    <li>Clean up codebase and define requirements.txt</li>
+                    <li>Deploy app on PythonAnywhere (or render/VPS alternatives)</li>
+                </ul>
+            </div>
+
+            <div class="step-block">
+                <h3>🔹 Docs + Polish</h3>
+                <ul>
+                    <li>Write README with description, features, API usage, and credits</li>
+                    <li>Add demo screenshots or GIF showing LLM-powered responses</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    
+    <div class="custom-line"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="tech-stack-container">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">LLM</span>
+        </div>
+    </section>
+
+    <div class="custom-line"></div>
+
+    <!-- Main Features Section -->
+    <section class="features-section">
+        <h2 class="section-heading">Main Features</h2>
+        <div class="features-container">
+
+            <div class="feature-card">
+                <span class="feature-icon">💬</span>
+                <h3 class="feature-title">Real-Time Chat</h3>
+                <p class="feature-text">Engage in fluid, real-time conversations powered by a seamless Flask + JS
+                    pipeline.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🤖</span>
+                <h3 class="feature-title">LLM-Powered Responses</h3>
+                <p class="feature-text">User queries are processed using Together.ai's large language models for
+                    intelligent and context-aware answers.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <h3 class="feature-title">Contextual Understanding</h3>
+                <p class="feature-text">Handles a wide range of natural language inputs, going far beyond keyword
+                    matching or static intent rules.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔧</span>
+                <h3 class="feature-title">Modular & Scalable</h3>
+                <p class="feature-text">Built with extendability in mind — easily swap models, update prompts, or scale
+                    features as needed.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <div class="custom-line"></div>
+
+    <!-- Reflections & Improvements Section -->
+    <section class="reflections-section">
+        <h2 class="section-heading">Reflections & Improvements</h2>
+        <p class="section-text">
+            Building OmNion marked a major leap from rule-based logic to real LLM-driven conversation design. It helped
+            me explore API integration, prompt engineering, and handling dynamic user queries using Together.ai's
+            language models. I also deepened my understanding of Flask's backend capabilities, secure environment setup,
+            and frontend communication using fetch.
+            The transition from Quirky's static intent system to OmNion's flexible, intelligent responses was both
+            exciting and challenging.
+            I plan to integrate this chatbot into each of my web projects to offer interactive support, fun engagement,
+            or instant user guidance.
+        </p>
+    </section>
+
+
+    <div class="custom-line"></div>
+
+    <section class="cta-section-project">
+        <h2 class="section-heading">Saw Something You Liked?</h2>
+        <div class="cta-container">
+            <div class="cta-card">
+                <div class="icon">🤝</div>
+                <h3>Like This Project?</h3>
+                <p>Let's connect and build more like it!</p>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
+                    Collaborate</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🧠</div>
+                <h3>Have Ideas?</h3>
+                <p>Got a problem worth solving? I'd love to hear it.</p>
+                <a href="/contact" class="cta-button">Share Your Idea</a>
+            </div>
+            <div class="cta-card">
+                <div class="icon">🚀</div>
+                <h3>Need Something Similar?</h3>
+                <p>I can build it tailored for your needs.</p>
+                <a href="/contact" class="cta-button" style="margin-top: 45px;">Request a Project</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
