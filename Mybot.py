@@ -1,7 +1,7 @@
 import os
 import requests
 
-api_key = "dbf285c0b717d664cf1e7cff4f3f6f3d05a4bb7e5795c4df2bc1aaa1c3b90266"
+api_key = "my_key"
 url = "https://api.together.xyz/v1/chat/completions"
 headers = {
     "Authorization": f"Bearer {api_key}",
