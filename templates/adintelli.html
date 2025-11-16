@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-OmNion
+AdIntelli
 {% endblock %}
 
 {% block content %}
 
 <div class="project-container">
+
     <!-- Project Title Section -->
     <section class="project-title-section">
-        <h1 class="project-title">OmNion</h1>
+        <h1 class="project-title">AdIntelli</h1>
         <div class="project-links">
-            <a href="https://omvarma4.pythonanywhere.com/" target="_blank" class="project-link-btn">View Live</a>
+            <a href="#" target="_blank" class="project-link-btn">View Live</a>
             <a href="#" class="project-link-btn">GitHub</a>
         </div>
     </section>
@@ -20,10 +21,13 @@ OmNion
     <section class="problem-statement-section">
         <h2 class="section-heading">Problem Statement</h2>
         <p class="section-text">
-            No big mission. No corporate problem to solve. Just me, experimenting, learning, and building a chatbot —
-            because… why not? I wanted to explore how a simple JSON-based intent system, a Flask backend, and a bit of
-            frontend magic could come together. This project isn't about reinventing the wheel — it's about getting my
-            hands dirty, understanding how things work, and enjoying the process of bringing an idea to life.
+            Marketing and performance teams struggle with scattered insights. KPIs live across platforms
+            like Google Ads, Meta Ads, Analytics, CRM tools, and dashboards—resulting in delayed insights,
+            fragmented decision-making, and no real-time visibility.
+            <br><br>
+            <strong>AdIntelli solves this.</strong> It centralizes all campaign metrics into a unified, 
+            real-time dashboard with smart alerts, anomaly detection, and actionable insights—making data
+            instantly accessible and simplifying performance monitoring.
         </p>
     </section>
 
@@ -36,27 +40,19 @@ OmNion
             <button class="carousel-prev" aria-label="Previous Slide">&lt;</button>
             <div class="carousel-track">
                 <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion.JPG') }}" alt="Screenshot 1"
+                    <img src="{{ url_for('static', filename='assets/AdIntelli/AdIntelli1.JPG') }}" alt="Screenshot 1"
                         class="carousel-image">
                 </div>
                 <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion2.JPG') }}" alt="Screenshot 2"
+                    <img src="{{ url_for('static', filename='assets/AdIntelli/AdIntelli2.JPG') }}" alt="Screenshot 2"
                         class="carousel-image">
                 </div>
                 <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion3.JPG') }}" alt="Screenshot 3"
+                    <img src="{{ url_for('static', filename='assets/AdIntelli/AdIntelli3.JPG') }}" alt="Screenshot 3"
                         class="carousel-image">
                 </div>
                 <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion4.JPG') }}" alt="Screenshot 4"
-                        class="carousel-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion5.JPG') }}" alt="Screenshot 5"
-                        class="carousel-image">
-                </div>
-                <div class="carousel-slide">
-                    <img src="{{ url_for('static', filename='assets/OmNion/OmNion6.JPG') }}" alt="Screenshot 6"
+                    <img src="{{ url_for('static', filename='assets/AdIntelli/AdIntelli4.JPG') }}" alt="Screenshot 4"
                         class="carousel-image">
                 </div>
             </div>
@@ -70,78 +66,79 @@ OmNion
     <section class="description-section">
         <h2 class="section-heading">Detailed Description</h2>
         <p class="section-text">
-            OmNion is a smart, LLM-powered personal chatbot assistant designed to answer user queries about me and
-            my projects.
-            Built using Flask, Together.ai APIs, HTML, CSS, and JavaScript, it blends a clean frontend with a powerful
-            backend for natural, conversational interactions.
+            AdIntelli is an AI-powered real-time KPI dashboard designed for marketing and growth teams.
+            It aggregates and syncs cross-platform campaign data, providing instant insights into
+            performance trends, budget utilization, ROAS, CPC changes, and more.
         </p>
         <p class="section-text">
-            It leverages large language models to understand open-ended questions, provide detailed responses, and
-            simulate a human-like assistant with memory and context capabilities.
-            Whether you're curious about my work, tech stack, or latest innovations — OmNion has the answers.
+            The platform includes anomaly detection, custom alerts, smart suggestions, and an intuitive UI
+            built for fast decision-making. Instead of opening multiple dashboards, AdIntelli presents
+            everything in a single unified view—updated live.
         </p>
         <p class="section-text">
-            OmNion is an evolved extension of Quirky — the original intent-based chatbot built by me — but now
-            supercharged with Together.ai's LLMs, enabling more intelligent and flexible conversations beyond predefined
-            tags.
+            Built with Flask, REST APIs, and powerful charting libraries, AdIntelli combines backend APIs,
+            auto-refreshing datasets, and frontend visualization into a single intelligent monitoring hub.
         </p>
-
     </section>
 
     <div class="custom-line"></div>
 
+    <!-- Development Steps -->
     <section class="steps-section">
         <h2 class="section-heading">📌 Development Steps</h2>
         <div class="section-text">
 
             <div class="step-block">
-                <h3>🔹 Backend (Flask + Together.ai)</h3>
+                <h3>🔹 Data Layer</h3>
                 <ul>
-                    <li>Set up Flask backend with API routes to handle chat requests</li>
-                    <li>Integrate Together.ai’s LLM API for natural language understanding</li>
-                    <li>Send user messages to Together’s endpoint and fetch intelligent responses</li>
-                    <li>Return the LLM's response to the frontend in JSON format</li>
+                    <li>Integrate APIs (Google Ads, Meta Ads, Google Analytics, CRM exports)</li>
+                    <li>Normalize metrics into a consistent data structure</li>
+                    <li>Auto-refresh data using scheduled jobs</li>
+                    <li>Store processed KPIs for fast access</li>
                 </ul>
             </div>
 
             <div class="step-block">
-                <h3>🔹 Frontend (HTML + CSS + JS)</h3>
+                <h3>🔹 Backend (Flask)</h3>
                 <ul>
-                    <li>Design chat interface with input box, send button, and message display</li>
-                    <li>Use JavaScript to send user queries to the Flask backend via fetch</li>
-                    <li>Dynamically render user and bot messages in the chat UI</li>
-                    <li>Implement responsive layout with smooth UX styling</li>
+                    <li>API routes for fetching KPI data</li>
+                    <li>Compute metrics like ROAS, CTR, CPA, Spend Trends</li>
+                    <li>Anomaly detection module</li>
+                    <li>Custom alert triggers and thresholds</li>
                 </ul>
             </div>
 
             <div class="step-block">
-                <h3>🔹 LLM Integration</h3>
+                <h3>🔹 Frontend (HTML + CSS + JS + Charts)</h3>
                 <ul>
-                    <li>Configure Together.ai API with secure environment variables</li>
-                    <li>Format user input as messages compatible with LLM chat format</li>
-                    <li>Handle errors, timeouts, and fallback gracefully</li>
+                    <li>Dashboard layout with live refreshing components</li>
+                    <li>Interactive visualizations (line charts, bar graphs, KPI tiles)</li>
+                    <li>Responsive UI for desktop & mobile</li>
+                    <li>Smooth user experience with instant updates</li>
                 </ul>
             </div>
 
             <div class="step-block">
                 <h3>🔹 Deploy</h3>
                 <ul>
-                    <li>Clean up codebase and define requirements.txt</li>
-                    <li>Deploy app on PythonAnywhere (or render/VPS alternatives)</li>
+                    <li>Deploy Flask backend to PythonAnywhere / VPS</li>
+                    <li>Configure data scheduler</li>
+                    <li>Optimize for load time and fast fetch calls</li>
                 </ul>
             </div>
 
             <div class="step-block">
                 <h3>🔹 Docs + Polish</h3>
                 <ul>
-                    <li>Write README with description, features, API usage, and credits</li>
-                    <li>Add demo screenshots or GIF showing LLM-powered responses</li>
+                    <li>README with system architecture</li>
+                    <li>Dashboard usage guide</li>
+                    <li>Performance benchmarks</li>
                 </ul>
             </div>
 
         </div>
     </section>
-    
+
     <div class="custom-line"></div>
 
     <!-- Tech Stack Section -->
@@ -150,8 +147,10 @@ OmNion
         <div class="tech-stack-container">
             <span class="tech-tag">Flask</span>
             <span class="tech-tag">Python</span>
-            <span class="tech-tag">NLP</span>
-            <span class="tech-tag">LLM</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Chart.js</span>
+            <span class="tech-tag">Data Pipelines</span>
         </div>
     </section>
 
@@ -163,59 +162,53 @@ OmNion
         <div class="features-container">
 
             <div class="feature-card">
-                <span class="feature-icon">💬</span>
-                <h3 class="feature-title">Real-Time Chat</h3>
-                <p class="feature-text">Engage in fluid, real-time conversations powered by a seamless Flask + JS
-                    pipeline.</p>
+                <span class="feature-icon">📊</span>
+                <h3 class="feature-title">Real-Time KPIs</h3>
+                <p class="feature-text">Live metrics for spend, clicks, conversions, ROAS, CPR, and more.</p>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">🤖</span>
-                <h3 class="feature-title">LLM-Powered Responses</h3>
-                <p class="feature-text">User queries are processed using Together.ai's large language models for
-                    intelligent and context-aware answers.</p>
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Cross-Platform Aggregation</h3>
+                <p class="feature-text">Unified dashboard for Google, Meta, Analytics, CRM, and more.</p>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">🧠</span>
-                <h3 class="feature-title">Contextual Understanding</h3>
-                <p class="feature-text">Handles a wide range of natural language inputs, going far beyond keyword
-                    matching or static intent rules.</p>
+                <span class="feature-icon">🚨</span>
+                <h3 class="feature-title">Smart Alerts</h3>
+                <p class="feature-text">Instant notifications for spikes, drops, and anomalies.</p>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">🔧</span>
-                <h3 class="feature-title">Modular & Scalable</h3>
-                <p class="feature-text">Built with extendability in mind — easily swap models, update prompts, or scale
-                    features as needed.</p>
+                <span class="feature-icon">📈</span>
+                <h3 class="feature-title">Visual Insights</h3>
+                <p class="feature-text">Beautiful, interactive charts for faster decision-making.</p>
             </div>
 
         </div>
     </section>
 
-
-
-
     <div class="custom-line"></div>
 
-    <!-- Reflections & Improvements Section -->
+    <!-- Reflections -->
     <section class="reflections-section">
         <h2 class="section-heading">Reflections & Improvements</h2>
         <p class="section-text">
-            Building OmNion marked a major leap from rule-based logic to real LLM-driven conversation design. It helped
-            me explore API integration, prompt engineering, and handling dynamic user queries using Together.ai's
-            language models. I also deepened my understanding of Flask's backend capabilities, secure environment setup,
-            and frontend communication using fetch.
-            The transition from Quirky's static intent system to OmNion's flexible, intelligent responses was both
-            exciting and challenging.
-            I plan to integrate this chatbot into each of my web projects to offer interactive support, fun engagement,
-            or instant user guidance.
+            Building AdIntelli helped me understand the depth of cross-platform metric aggregation,
+            scheduling systems, and real-time dashboards. Creating a unified data model for multiple ad
+            platforms was challenging but rewarding.
+            <br><br>
+            Future improvements include:
+            <br>• Adding predictive AI for spend & conversion forecasting  
+            <br>• Natural language queries (“Show me yesterday’s ROAS”)  
+            <br>• Role-based views for marketers & managers  
+            <br>• Integrating Slack/Email alert automation  
         </p>
     </section>
 
-
     <div class="custom-line"></div>
 
+    <!-- CTA -->
     <section class="cta-section-project">
         <h2 class="section-heading">Saw Something You Liked?</h2>
         <div class="cta-container">
@@ -223,8 +216,7 @@ OmNion
                 <div class="icon">🤝</div>
                 <h3>Like This Project?</h3>
                 <p>Let's connect and build more like it!</p>
-                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's
-                    Collaborate</a>
+                <a href="/contact" class="cta-button" style="position: absolute; bottom: 10%; left: 30%;">Let's Collaborate</a>
             </div>
             <div class="cta-card">
                 <div class="icon">🧠</div>
@@ -240,6 +232,7 @@ OmNion
             </div>
         </div>
     </section>
+
 </div>
 
 {% endblock %}
