@@ -55,6 +55,10 @@ def chap():
 def resume():
     return render_template('resume.html')
 
+@app.route('/adintelli')
+def adintelli():
+    return render_template('adintelli.html')
+
 @app.route('/get-tag', methods=['POST'])
 def getT():
     data = request.get_json()
